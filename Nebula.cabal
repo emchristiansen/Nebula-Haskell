@@ -1,0 +1,23 @@
+name: Nebula
+version: 0.0.1
+cabal-version: >= 1.8
+build-type: Simple
+
+library
+ build-depends: base, Codec-Image-DevIL, array
+ exposed-modules: Nebula.Util
+ hs-source-dirs: src
+ ghc-options: -Wall -O2
+
+executable Nebula
+ main-is: Main.hs
+ build-depends: Nebula, base, Codec-Image-DevIL, array
+ hs-source-dirs: exec
+ ghc-options: -Wall -O2
+
+executable NebulaTest
+ main-is: Test.hs
+ build-depends: Nebula, base
+ hs-source-dirs: test
+ build-depends: QuickCheck -any
+ ghc-options: -Wall -O2
