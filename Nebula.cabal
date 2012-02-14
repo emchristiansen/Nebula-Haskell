@@ -4,15 +4,17 @@ cabal-version: >= 1.8
 build-type: Simple
 
 library
- build-depends: base, Codec-Image-DevIL, array
+ build-depends: base, repa, repa-devil
  exposed-modules: Nebula.Util
  hs-source-dirs: src
+ extensions: FlexibleContexts
  ghc-options: -Wall -O2
 
 executable Nebula
  main-is: Main.hs
- build-depends: Nebula, base, Codec-Image-DevIL, array
+ build-depends: Nebula, base, repa, repa-devil
  hs-source-dirs: exec
+ extensions: FlexibleContexts
  ghc-options: -Wall -O2
 
 executable NebulaTest
